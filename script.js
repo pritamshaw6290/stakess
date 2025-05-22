@@ -26,6 +26,8 @@ cashout.addEventListener("click", () => {
         localStorage.setItem("wallet", wallet);
         wallettxt.textContent = wallet.toFixed(3);
         gameover = true;
+        cashout.style.opacity = 0.5;
+        cashout.style.cursor = "default";
         alert("You cashed out! "+profit);
          profitAmt.textContent = "0.000";
          reset();
@@ -159,5 +161,4 @@ function reset()
         mines.clear();
         count = 0;
 }
-
 
